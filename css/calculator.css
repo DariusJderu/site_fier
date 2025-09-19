@@ -1,0 +1,121 @@
+/*Navbar*/
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-custom {
+
+    background-color: #212121;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.logo {
+
+    margin-right: 0.8rem;
+}
+
+#scris-logo {
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 992px) { /* lg+ */
+  .navbar-custom .nav-link { padding: .75rem 1rem; }
+}
+/*Navbar*/
+
+
+/*Calculator*/
+body {
+
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+}
+
+.mt-nav {
+
+    margin-top: 96px;
+}
+
+#page-title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.calc-card {
+
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+    border-radius: 0.75rem;
+}
+
+.form-label {
+
+    font-weight: 600;
+    color: #757575;
+}
+
+.payout-title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payout-amount {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
+    color:#2E7D32; 
+    line-height: 1;
+}
+
+.payout-currency {
+
+    color: #757575;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.btn-cta {
+
+    background-color: #2E7D32;
+    border-color: #2E7D32;
+
+    color:#fff; 
+    font-weight:700; 
+    letter-spacing: 0.3px;
+}
+.btn-cta:hover {
+
+    background-color: #276b2b;
+    border-color: #276b2b;
+}
+
+.muted-note {
+
+    color: #757575;
+}
+
+@media(max-width: 991.98px) {
+
+    .calc-card { 
+
+        padding: 1rem !important; 
+    }
+}
+/*Calculator*/
