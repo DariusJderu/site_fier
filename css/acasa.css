@@ -1,0 +1,524 @@
+/*Navbar*/
+.navbar-custom .navbar-brand, 
+.navbar-custom .nav-link {
+
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-custom {
+
+    background-color: #212121;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.logo {
+
+    margin-right: 0.8rem;
+}
+
+#scris-logo {
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 992px) { /* lg+ */
+  .navbar-custom .nav-link { padding: .75rem 1rem; }
+}
+/*Navbar*/
+
+
+/*Carousel*/
+/* spațiu sub navbarul fixed-top */
+.mt-nav { 
+    
+    margin-top: 96px; 
+}
+
+#carusel .carousel-item {
+
+    /* dacă 60vh < 320px → folosește 320px;
+    dacă 60vh > 720px → folosește 720px;
+    altfel → folosește 60vh */
+    height: clamp(320px, 90vh, 720px);
+}
+
+/* imaginea umple cadrul; poziția se ia dintr-o variabilă CSS --pos */
+#carusel .carousel-item img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover; /* umple fără goluri, dar taie marginile */
+    object-position: var(--pos, 50% 50%); /* fallback: centrat (50% 50%) */
+}
+
+/* =====  overlay fix pe carousel ===== */
+#carusel { 
+
+    position: relative; 
+}
+
+.overlay-fix {
+
+    /*Gen are pentru ca este #carousel la positon relative, asa ca overlay ul are position absolut fata de carousel*/
+    position: absolute;
+    inset: 0; /*top,right,bottom,left: 0*/
+                          
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;       
+    text-align: center;
+    padding: 1rem;
+    
+    pointer-events: none; 
+}
+
+/* Mică mască pentru lizibilitate pe imagini foarte luminoase */
+.overlay-fix::before {
+
+    content:"";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        rgba(33,33,33,0.35) 0%,
+        rgba(33,33,33,0.25) 40%,
+        rgba(33,33,33,0.35) 100%
+    );  
+  
+    z-index: 0;
+}
+
+/* Tipografie (folosește Montserrat pentru titlu, Roboto pentru subtitlu) */
+.overlay-title {
+
+    position: relative; 
+    z-index: 1;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+    line-height: 2;
+    padding-bottom: 1rem;
+
+    color: #FFFFFF;  
+                
+    text-shadow: 0 2px 14px rgba(0,0,0,.35);
+
+    font-size: clamp(1.35rem, 4.2vw, 2.4rem);
+}
+
+.overlay-subtitle {
+
+    position: relative; 
+    z-index: 1;
+    
+    margin: 0.5rem 0 0.8rem;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: #FFFFFF;    
+    opacity: .85;
+    text-shadow: 0 2px 12px rgba(0,0,0,.35);
+
+    font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+}
+
+/* Butoane CTA */
+.btn-cta {
+
+    pointer-events: auto;
+    z-index: 1;  
+
+    background-color: #2E7D32;     
+    border-color: #2E7D32;
+    
+
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    
+    letter-spacing: 0.5px;
+}
+.btn-cta:hover, .btn-cta:focus {
+
+    background-color: #276b2b;    
+    border-color: #276b2b;
+    color: #FFFFFF;
+}
+
+.btn-ghost {
+
+    pointer-events: auto;
+    z-index: 1;
+
+    background: transparent;
+    border: 2px solid #FFFFFF;     
+    color: #FFFFFF;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.btn-ghost:hover, .btn-ghost:focus {
+
+    background: rgba(255,255,255,.12);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+@media(max-width: 768px) {
+
+    .overlay-fix {
+
+        justify-content: flex-start; 
+        padding-top: 20vh;          
+    }
+
+}
+/*Carousel*/
+
+
+/*Despre noi*/
+#despre-noi {
+
+    min-height: 67vh;
+
+    background-color: #f2f2f2;
+}
+
+.section-title {
+
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #212121
+}
+
+/* .section-subtitle {
+
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+} */
+
+.feature-card {
+
+    border: 1px solid rgba(33,33,33,.08);
+    border-top: 4px solid #2E7D32;      
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.feature-card:hover {
+
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.10);
+}
+
+.feature-icon {
+
+    width: 3em;
+    height: 3em;
+
+    padding-bottom: 2.2em;
+    padding-top: 1.5em;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-title {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 650;
+    color: #212121;
+
+    margin-bottom: 0.5em;
+}
+
+.feature-text {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1em;
+}
+/*Despre noi*/
+
+
+/*Preturi*/
+#preturi-titlu {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.preturi-card {
+
+    min-height: 180px;
+}
+
+.preturi-imagine {
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: cover;
+}
+
+.preturi-cards-titlu {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.preturi-cards-titlu-lung {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+@media(max-width: 768px) {
+
+    .preturi-cards-titlu-lung {
+
+        font-size: 1.1rem;
+    }
+}
+
+.preturi-comentariu {
+
+    color: #757575;
+    
+    font-family: "Roboto", sans-serif;
+    font-size: 1.05rem;
+}
+
+.preturi-preturi {
+
+    font-weight: 700; 
+    color: #2E7D32; 
+    font-size: 1.5rem;
+
+    text-transform: uppercase;
+}
+/*Preturi*/
+
+
+/*Calculator CTA*/
+#cta-calculator {
+
+    background-color: #f2f2f2;
+}
+
+.calculator-titlu {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #212121;
+}
+
+.calculator-subtitlu {
+
+    font-family: "Roboto", sans-serif;
+    color: #757575;
+    font-size: 1.2rem;
+}
+@media(max-width: 768px) {
+
+    .calculator-subtitlu {
+
+        font-size: 0.95rem;
+    }
+}
+
+.calculator-buton {
+
+    background-color: #006068;     
+    border-color: #006068;
+    
+
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.8rem 1.2rem;
+}
+.calculator-buton:hover, .calculator-buton:focus {
+
+    background-color: #037c8a;    
+    border-color: #037c8a;
+    color: #FFFFFF;
+}
+@media(max-width: 1024px) {
+
+    .calculator-buton {
+
+        font-size: 0.95rem;
+    }
+}
+/*Calculator CTA*/
+
+
+/*CTA*/
+.cta-title {
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #212121;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.cta-text {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    color: #212121;
+    
+    margin-bottom: 1rem;
+}
+
+.btn-whatsapp {
+
+    background-color: #2E7D32; 
+    border-color: #2E7D32;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 0.8rem 1.2rem;
+}
+.btn-whatsapp:hover,
+.btn-whatsapp:focus {
+
+    background-color: #358f3a;
+    border-color: #358f3a;
+    color: #FFFFFF;
+}
+
+/* .cta-program {
+
+    font-family: "Roboto", sans-serif;
+    font-size: 1.15rem;
+    color: #757575;  
+    margin: 0;
+} */
+
+@media(max-width: 1024px) {
+
+    .cta-title {
+        
+        font-size: 1.4rem;
+    }
+
+    .cta-text {
+
+        font-size: 1.2rem;
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
+        line-height: 1.6;
+    }
+
+    .btn-whatsapp {
+
+        font-size: 0.95rem;
+    }
+    .btn-whatsapp svg {
+
+        width: 16px;
+        height: 16px;
+    }
+
+    /* .cta-program {
+
+        font-size: 0.9rem;
+    } */
+}
+@media(max-width: 768px) {
+
+    .cta-text {
+
+        font-size: 0.9rem;
+    }
+}
+/*CTA*/
+
+
+/*Contact*/
+#contact {
+
+    background-color: #212121;
+
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-titlu {
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contact-logo {
+
+    width: 120px;
+    border-radius: 50%;
+}
+
+.contact-card {
+
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-link {
+
+    color: #1565C0;
+    text-decoration: none;
+}
+.contact-link:hover {
+
+    text-decoration: underline;
+}
+
+.buton-telefon {
+
+    background-color: #2E7D32;
+}
+/*Contact*/
+
+
+/*FOOTER*/
+.text-footer {
+
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/*FOOTER*/

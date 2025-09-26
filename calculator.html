@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Remat Severin colectează deșeuri feroase neferoase. Oferim transport inclus și plată pe loc. Contactează-ne acum!">
+    <title>Remat - Calculator Preț</title>
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!---->
+
+    <!--Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!---->
+
+    <!--Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!---->
+
+    <!--Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!---->
+
+    <link rel="stylesheet" href="css/calculator.css">
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <header>
+
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="acasa.html" id="scris-logo">
+                    <img src="images/Logo_Actual_Facebook.png" alt="Remat Colectare" height="70" class="rounded-circle logo">
+                    Remat
+                </a>
+
+                <!-- Buton mobil (hamburger) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Meniu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Acasă</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+    <!---->
+
+
+    <!--Calculator-->
+    <main class="mt-nav">
+
+        <div class="container py-5">
+
+            <h1 id="page-title" class="text-center mb-4 mt-4">Calculează prețul deșeurilor tale</h1>
+            
+            <p class="text-center mb-5 text-muted">Introdu materialele deținute și cantitățile lor (în kg), iar noi îți afișăm suma pe care o vei primi pe loc.</p>
+
+            <!--Calculatorul-->
+            <div class="row g-4">
+
+                <!-- Coloana STÂNGA (formular) -->
+                <div class="col-12 col-lg-6">
+                    <div class="calc-card p-4">
+
+                        <!-- Rând 1 -->
+                        <div class="row g-4 mb-4">
+
+                            <div class="col-12 col-md-6">
+                                <label for="material1" class="form-label">Alege materialul</label>
+                                <select id="material1" class="form-select material-select" aria-label="Material 1">
+                                    <option value="" selected>— Selectează Materialul —</option>
+                                    <option value="fier">Fier</option>
+                                    <option value="cupru_lucios">Cupru Lucios</option>
+                                    <option value="cupru_mixt">Cupru Mixt</option>
+                                    <option value="aluminiu">Aluminiu</option>
+                                    <option value="sarma_aluminiu">Sârmă Aluminiu</option>
+                                    <option value="jante_aluminiu">Jante Aluminiu</option>
+                                    <option value="aluminiu_mixt">Aluminiu Mixt</option>
+                                    <option value="baterii">Baterii</option>
+                                    <option value="inox">Inox</option>
+                                    <option value="deeeuri">Deee-uri</option>
+                                    <option value="alama">Alamă</option>    
+                                    <option value="radiatoare_alama">Radiatoare Alamă</option> 
+                                    <option value="radiatoare_c_a">Radiatoare Cupru-Aluminiu</option> 
+                                    <option value="radiatoare_aluminiu">Radiatoare Aluminiu</option>   
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="qty1" class="form-label">Cantitatea deținută (kg)</label>
+                                <input id="qty1" type="number" min="0" step="0.1" class="form-control qty-input" placeholder="Ex: 25.5">
+                            </div>
+                            
+                        </div>
+                        <!-- Rând 1 -->
+
+                        <!-- Rând 2 -->
+                        <div class="row g-4 mb-4">
+
+                            <div class="col-12 col-md-6">
+                                <label for="material2" class="form-label">Alege materialul</label>
+                                <select id="material2" class="form-select material-select" aria-label="Material 2">
+                                    <option value="" selected>— Selectează Materialul —</option>
+                                    <option value="fier">Fier</option>
+                                    <option value="cupru_lucios">Cupru Lucios</option>
+                                    <option value="cupru_mixt">Cupru Mixt</option>
+                                    <option value="aluminiu">Aluminiu</option>
+                                    <option value="sarma_aluminiu">Sârmă Aluminiu</option>
+                                    <option value="jante_aluminiu">Jante Aluminiu</option>
+                                    <option value="aluminiu_mixt">Aluminiu Mixt</option>
+                                    <option value="baterii">Baterii</option>
+                                    <option value="inox">Inox</option>
+                                    <option value="deeeuri">Deee-uri</option>
+                                    <option value="alama">Alamă</option>    
+                                    <option value="radiatoare_alama">Radiatoare Alamă</option> 
+                                    <option value="radiatoare_c_a">Radiatoare Cupru-Aluminiu</option> 
+                                    <option value="radiatoare_aluminiu">Radiatoare Aluminiu</option> 
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="qty2" class="form-label">Cantitatea deținută (kg)</label>
+                                <input id="qty2" type="number" min="0" step="0.1" class="form-control qty-input" placeholder="Ex: 10">
+                            </div>
+                            
+                        </div>
+                        <!-- Rând 2 -->
+
+                        <!-- Rând 3 -->
+                        <div class="row g-4 mb-4">
+
+                            <div class="col-12 col-md-6">
+                                <label for="material3" class="form-label">Alege materialul</label>
+                                <select id="material3" class="form-select material-select" aria-label="Material 3">
+                                    <option value="" selected>— Selectează Materialul —</option>
+                                    <option value="fier">Fier</option>
+                                    <option value="cupru_lucios">Cupru Lucios</option>
+                                    <option value="cupru_mixt">Cupru Mixt</option>
+                                    <option value="aluminiu">Aluminiu</option>
+                                    <option value="sarma_aluminiu">Sârmă Aluminiu</option>
+                                    <option value="jante_aluminiu">Jante Aluminiu</option>
+                                    <option value="aluminiu_mixt">Aluminiu Mixt</option>
+                                    <option value="baterii">Baterii</option>
+                                    <option value="inox">Inox</option>
+                                    <option value="deeeuri">Deee-uri</option>
+                                    <option value="alama">Alamă</option>    
+                                    <option value="radiatoare_alama">Radiatoare Alamă</option> 
+                                    <option value="radiatoare_c_a">Radiatoare Cupru-Aluminiu</option> 
+                                    <option value="radiatoare_aluminiu">Radiatoare Aluminiu</option> 
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="qty3" class="form-label">Cantitatea deținută (kg)</label>
+                                <input id="qty3" type="number" min="0" step="0.1" class="form-control qty-input" placeholder="Ex: 3">
+                            </div>
+                            
+                        </div>
+                        <!-- Rând 3 -->
+
+                    </div>
+
+                </div>
+                <!-- Coloana STÂNGA (formular) -->
+
+                <!-- Coloana DREAPTA (rezultat) -->
+                <div class="col-12 col-lg-6">
+                    <div class="calc-card p-4 h-100 d-flex flex-column justify-content-between">
+
+                        <!-- Headline + sumă -->
+                        <div>
+
+                            <h2 class="payout-title mb-4">Noi îți plătim:</h2>
+
+                            <div class="d-flex align-items-end gap-2">
+                                
+                                <div class="payout-currency">RON</div>
+
+                                <div id="totalAmount" class="payout-amount">0</div>
+
+                            </div>
+
+                            <p class="mb-3 mt-4 muted-note">
+                                Prețul afișat este orientativ. Pentru oferte detaliate și evaluare finală, 
+                                vă rugăm să ne contactați.
+                            </p>
+
+                            <div>
+                                <a href="https://wa.me/40753525405" class="btn btn-cta btn-lg">Trimite Mesaj</a>
+                            </div>
+
+                        </div>
+                        <!-- Headline + sumă -->
+
+                    </div>
+                </div>
+                <!-- Coloana DREAPTA (rezultat) -->
+
+            </div>
+            <!--Calculatorul-->
+
+        </div>
+
+    </main>
+    <!--Calculator-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>
